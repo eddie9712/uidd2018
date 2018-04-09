@@ -1,0 +1,194 @@
+
+body {  background:url('https://i.imgur.com/WHLiShx.jpg');
+    background-size:cover;
+    margin:0px;
+    padding:0px;   
+
+}
+.box {background:linear-gradient(180deg,hotpink,darkslateblue);
+    position:relative;
+    height:770px;
+    width:370px;
+    left:60%; 
+    top:10%;
+    border-radius:30px;
+      -webkit-transform:rotate(-55deg) skewY(10deg) skewX(10deg);
+      
+    }
+.content {background:linear-gradient(180deg,coral,tomato);
+  width:345px;
+  height:600px;
+  top:90px;
+  right:15px;
+  left:15px;
+  position:absolute;
+}
+#circle { width: 10px;
+     height: 10px;
+     background: white;
+     border-radius:10px;
+    float:left;
+  }
+#head1 { font-size:15px;
+        color:white;
+       position:absolute;     
+        top:-18px;
+        left:45px;
+     }
+#head2 {font-size:15px;
+        color:white;
+        position:absolute;
+        top:-18px;
+        left:150px;
+      }
+#head3 {font-size:15px;
+        color:white;
+        position:absolute;
+        top:-18px;
+        left:270px;
+      }
+#head4 {width:20px;
+        height:10px;
+        background:white;
+        position:absolute;
+        top:-15px;
+        left:310px;
+}      
+#head5 {width:5px;
+        height:5px;
+        background:white;
+        position:absolute;
+        top:-13px;
+        left:330px;
+      }
+      
+#inside1 {font-size:25px;
+        color:white;
+        font-family:fantasy;
+        position:absolute;
+        top:100px;
+        left:105px;
+      }
+#inside2 {font-size:100px;
+         color:white;
+        font-family:sans-serif;
+        position:absolute;
+        top:50px;
+        left:50px;
+      }
+#inside3 {font-size:20px;
+         color:white;
+        font-family:sans-serif;
+        position:absolute;
+        top:250px;
+        left:100px;
+      }
+#bottomblock { width:345px;
+              height:165px;
+              background:white;
+              position:absolute;
+              top:435px;
+              left:0px;
+            }
+#bottom1 { width:320px;
+              height:55px;
+              background:linear-gradient(90deg,hotpink,darkslateblue);
+              position:absolute;
+              top:520px;
+              left:13px;
+              border-radius:8px;
+         }
+#bottom2 {   font-size:20px;
+             font-family:sans-serif;
+             color:white;
+              position:absolute;
+              top:515px;
+              left:130px;
+            }
+#bottom3 { font-size:3px;
+              font-family:sans-serif;
+              color:gray;
+              position:absolute;
+              top:570px;
+              left:140px;
+            }
+#bottomback { width:260px;
+              height:90px;
+              background:linear-gradient(90deg,hotpink,darkslateblue);
+              position:absolute;
+              top:470px;
+              left:60px;
+              border-radius:5px;
+              transform:rotate(6deg)
+            }
+#bottomblock2 { width:260px;
+              height:90px;
+              background:white;
+              position:absolute;
+              top:470px;
+              left:60px;
+              box-shadow:3px 3px 12px gray;
+              border-radius:5px;         
+              transform:rotate(-6deg);
+            }
+#qw {        width:1px;
+              height:90px;
+              background:gray;
+              position:absolute;
+              top:470;
+              left:185;
+               transform:rotate(-6deg);
+            }
+#first {  font-size:20px;
+              font-family:fantasy;
+              color:black;
+              position:absolute;
+              top:460px;
+              left:80px;
+              transform:rotate(-6deg);
+            }
+#two {  font-size:18px;
+              font-family:fantasy;
+              color:black;
+              position:absolute;
+              top:450px;
+              left:190px;
+              transform:rotate(-6deg);
+            }
+#third {  font-size:15px;
+              font-family:fantasy;
+              color:gray;
+              position:absolute;
+              top:500px;
+              left:70px;
+              transform:rotate(-6deg);
+            }
+#fourth {  font-size:15px;
+              font-family:fantasy;
+              color:gray;
+              position:absolute;
+              top:490px;
+              left:190px;
+              transform:rotate(-6deg);
+            }
+#middle {     font-size:15px;
+              font-family:sans-serif;
+              color:white;
+              position:absolute;
+              top:420px;
+              left:90px;
+              
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
