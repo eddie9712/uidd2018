@@ -1,0 +1,201 @@
+
+<!doctype>
+<head>
+  <meta charset="utf-8">
+  <title>三維歷史記事web</title>
+  <link rel=stylesheet type="text/css" href="work2.css">
+  <link rel="Shortcut Icon" type="image/x-icon" href="https://drive.google.com/uc?export=view&id=1utIwWjQKTZGp8TJgL5UMW7uj74fGhcVu">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    alert("用手機開會跑掉喔!XD");
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.js"></script>
+  <script>
+    $(document).ready(function(){
+      var preloadimage=['https://i.imgur.com/IHlvhgs.png' ,'https://i.imgur.com/pcGxRyo.jpg' ,'https://i.imgur.com/eQD8FTQ.jpg' ,'https://i.imgur.com/xDxvv94.jpg'];
+      var imgs= [];
+      var count=0;
+      for(var i=0;i<preloadimage.length;i++)   //to preload the image
+      {
+         imgs[i]=new Image();
+         imgs[i].src=preloadimage[i];
+      }    //end preload 
+      $('#fck').mouseover(function()
+          {
+             count++;
+            if((count%4)==1)
+            {
+              $(this).attr('src',imgs[1].src);
+              $('#gan').attr('href','https://i.imgur.com/pcGxRyo.jpg');
+              $('#fck').click(function(){
+                $('#imageslider a').fancybox();
+              });
+            }
+            if((count%4)==2)
+            {
+              $(this).attr('src',imgs[2].src);
+              $('#gan').attr('href','https://i.imgur.com/eQD8FTQ.jpg'); 
+               $('#fck').click(function(){
+                $('#imageslider a').fancybox();
+              });
+  
+            }
+            if((count%4)==3)
+            {
+              $(this).attr('src',imgs[3].src);
+              $('#gan').attr('href','https://i.imgur.com/xDxvv94.jpg');
+              $('#fck').click(function(){
+            $('#imageslider a').fancybox();
+          });
+                 } 
+            if((count%4)==0)
+            {
+              $(this).attr('src',imgs[0].src);
+                $('#gan').attr('href',"https://i.imgur.com/IHlvhgs.png");
+              $('#fck').click(function(){
+                $('#imageslider a').fancybox();
+              });
+             }      
+          });  //end mouser over
+        $('#link1').mouseover(function()
+         {        
+           $('#link1').css(
+             {
+               'width':'+=10px',
+               'height':'+=10px',
+               'border':'3px solid white',
+               
+             });
+            
+         }); //end mouseover
+        $('#link1').mouseout(function()
+         {
+          $('#link1').css(
+              {
+                'width':'-=10px',
+                'height':'-=10px',
+                'border':'none'
+              }); //end css
+             });// end mouseout
+     $('#link2').mouseover(function()
+         {        
+           $('#link2').css(
+             {
+               'width':'+=10px',
+               'height':'+=10px',
+               'border':'3px solid white',
+               
+             });      
+         }); //end mouseover
+        $('#link2').mouseout(function()
+         {
+          $('#link2').css(
+              {
+                'width':'-=10px',
+                'height':'-=10px',
+                'border':'none'
+              }); //end css
+         });// end mouseout
+     $('#a').mouseover(function()
+         {                  
+           $('#a').css(
+             {
+               'font-size':'+=3px'  
+             });         
+         }); //end mouseover
+        $('#a').mouseout(function()
+         {
+          $('#a').css(
+              {
+                'font-size':'-=3px'
+              }); //end css
+             });// end mouseout
+      $('#b').mouseover(function()
+         {                  
+           $('#b').css(
+             {
+               'font-size':'+=3px'  
+             });         
+         }); //end mouseover
+        $('#b').mouseout(function()
+         {
+          $('#b').css(
+              {
+                'font-size':'-=3px'
+              }); //end css
+             });// end mouseout
+       $('#l').mouseover(function()
+         {                  
+           $('#l').css(
+             {
+               'font-size':'+=3px'  
+             });         
+         }); //end mouseover
+        $('#l').mouseout(function()
+         {
+          $('#l').css(
+              {
+                'font-size':'-=3px'
+              }); //end css
+             });// end mouseout
+      $('#c').mouseover(function()
+         {                  
+           $('#c').css(
+             {
+               'font-size':'+=3px'  
+             });         
+         }); //end mouseover
+        $('#c').mouseout(function()
+         {
+          $('#c').css(
+              {
+                'font-size':'-=3px'
+              }); //end css
+         });// end mouseout
+        $('#entrance').click(function()
+            {
+              window.location.assign('http://luffy.ee.ncku.edu.tw/~eddie9712/work2p2.html');
+            });
+         }); //end ready
+    </script>
+</head>
+<body>
+  <div id="back"></div>
+  <div id="imageslider">
+    <a id="gan" href="https://i.imgur.com/IHlvhgs.png"><img id="fck" src="https://i.imgur.com/IHlvhgs.png" width="97%" height="97%" title="南門大碑林一景"></a>
+  </div>
+  <div id="r1" class="resource">(圖片來源:台南市中西區公所,網路http://blog.xuite.net/kmal199)</div>
+    <div id="infor1" ><div id="para"><b>【簡介】
+          臺灣府城大南門內城造型上屬於重簷歇山單脊燕尾形式的城樓，右方空地上有碑林一座，展示著數量豐富的古碑，是研究臺南市歷史的重要資料。</b></div></div>
+    <div id="r2" class="resource">(文章出處:台南市中西區區公所)</div>
+  <div id="intro"></div>
+  <div id="author">Designed by<a href="https://www.facebook.com/yongshengster" target="_blank"><div id="link1"><b>譚永勝</b></div></a>feat.<a href="https://www.facebook.com/eddie.wang.7773" target="_blank"><div id="link2"><b>Eddie Wang</b></div></a>歷史系同學</div>
+  <div id="outlink">
+    <h1>相關網站</h1>
+    <ul>
+      <b><a target="_blank" href="http://culture.tainan.gov.tw/historic/form/index-1.php?m2=171&id=720"><li id="a">台南市文化局</a>        
+      <a target="_blank" href="https://www.google.com.tw/maps/place/%E7%A2%91%E6%9E%97/@22.9862992,120.203147,15z/data=!4m2!3m1!1s0x0:0xe9fc83a523143525?sa=X&ved=0ahUKEwjx5Nj78pjaAhXEFpQKHUnIAFYQ_BIIggEwCg"><li id="b">位置資訊</a>
+      <a target="_blank" href="http://www.tnwcdo.gov.tw/culture01a.asp?ID=%7B4F1144EC-46D7-45F5-858B-9B7A86B00120%7D"><li id="l" >台南中西區公所</a>
+        <a target="_blank" href="https://zh.wikipedia.org/wiki/%E5%8D%97%E9%96%80%E5%85%AC%E5%9C%92%E7%A2%91%E6%9E%97"><li id="c" >維基百科</a></b>    
+     </ul>
+   </div> 
+   <marquee id="point" behavior="alternate" width="170px" height="50px" scrollamount="14"><b>click me=>></b></marquee>
+   <div id="entrance"></div>
+ <audio src="https://drive.google.com/uc?export=view&id=1uWmAAcMCn7T9HlJ15j0awWD-6M-Vsngd" loop="loop">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
