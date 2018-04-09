@@ -1,0 +1,502 @@
+<!doctype>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>三維立體記事web</title>
+    <link rel=stylesheet type="text/css" href="work2p2.css">
+    <link rel="Shortcut Icon" type="image/x-icon" href="https://drive.google.com/uc?export=view&id=1utIwWjQKTZGp8TJgL5UMW7uj74fGhcVu">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function()
+          {
+            alert('使用說明:1.箭頭選月份2.點開始記事3.然後輸入要做的事4.點顯示查看5.點儲存6.依照點讚人數顯示內容');
+            var k=0;
+            var v=-1;
+            var datajan1;
+            var datajan2;
+            var datafeb1;
+            var datafeb2;
+            var datamar1;
+            var datamar2;
+            var dataapr1;
+            var dataapr2;
+            var datamay1;
+            var datamay2;
+            var datajun1;
+            var datajun2;
+            var datajul1;
+            var datajul2;
+            var dataaug1;
+            var dataaug2;
+            var datasep1;
+            var datasep2;
+            var dataoct1;
+            var dataoct2;
+            var datanov1;
+            var datanov2;
+            var datadec1;
+            var datadec2;
+            var people=0;
+        $('#button1').click(function()  //month++
+            {
+              v++;
+              var b=((v+3)%12);
+              var a=((v+2)%12);
+              var c=((v+1)%12);
+              var d=(v%12);
+             if(b==0)
+              b=12;
+              if(c==0)
+              c=12;
+              if(d==0)
+              d=12;
+              if(a==0)
+              a=12;
+              $('#k').text(a);
+              $('#b'+a).animate(   //1
+                  {
+                    'opacity':'0',
+                    'top':'0%'
+                  },
+                  999,
+                  function(){
+                    $('#b'+a).animate(
+                    {
+                      'top':'44%'
+                    },
+                    1,
+                    function(){    ///2
+                    $('#b'+a).animate(
+                        {
+                          'opacity':'1'
+                        },
+                        1000, 
+                       function(){
+                      $('.o1').css('opacity','0');
+                      $('#b'+a).css('top','44%');
+                      $('#b'+c).css('top','85%');
+                      $('#b'+b).css('top','3%');
+                      $('#b'+a).css('opacity','1');
+                      $('#b'+b).css('opacity','1');
+                      $('#b'+c).css('opacity','1');
+                    });
+                    }
+                    );}
+                    );
+                $('#b'+c).animate(  //1
+                  {
+                    'opacity':'0',
+                  },
+                  1000,
+                  function(){     //2
+                    $('#b'+c).animate(
+                        {
+                          'opacity':'1',
+                          'top':'85%'
+                        },
+                        1000,
+                        );
+                  }
+                  );
+                $('#b'+d).animate(
+                  {
+                      'opacity':'0',
+                      'top':'100%'
+                  },
+                  1000,
+                  function(){
+                    $('#b'+d).animate(
+                    {
+                      'top':'44%'
+                    }
+                  ); 
+                  }
+                  );
+                $('#b'+b).animate(
+                 {
+                   'opacity':'1',
+                   'top':'3%'
+                 });
+                
+            });
+       $('#button2').click(function()     //to change the month
+           { 
+            v--;  
+            if(v<=0)
+            {
+             v+=12;
+            }
+            var q=((v+1)%12);
+            var w=((v+4)%12);
+            var e=((v+3)%12);
+            var r=((v+2)%12);
+           if(q==0)
+              q=12;
+              if(w==0)
+              w=12;
+              if(e==0)
+              e=12;
+              if(r==0)
+              r=12;
+          $('#k').text(r);
+             $('#b'+r).animate(  
+                  {
+                    'opacity':'0',
+                    'top':'100%'
+                  },
+                  999,
+                  function(){
+                    $('#b'+r).animate(
+                    {
+                      'top':'44%'
+                    },
+                    1,
+                    function(){   
+                    $('#b'+r).animate(
+                        {
+                          'opacity':'1'
+                        },
+                        1000, 
+                       function(){
+                      $('.o1').css('opacity','0');
+                      $('#b'+r).css('top','44%');
+                      $('#b'+q).css('top','85%');
+                      $('#b'+e).css('top','3%');
+                      $('#b'+r).css('opacity','1');
+                      $('#b'+q).css('opacity','1');
+                      $('#b'+e).css('opacity','1');
+                    });
+                    }
+                    );}
+                    );
+                $('#b'+e).animate(  
+                  {
+                    'opacity':'0',
+                  },
+                  1000,
+                  function(){     //2
+                    $('#b'+e).animate(
+                        {
+                          'opacity':'1',
+                          'top':'3%'
+                        },
+                        1000,
+                        );
+                  }
+                  );
+                $('#b'+q).animate(
+                  {
+                      'opacity':'1',
+                      'top':'85%'
+                  },
+                  1000,
+                  function(){
+                    $('#b'+w).animate(
+                    {
+                      'opacity':'0',
+                      'top':'44%'
+                    }
+                  ); 
+                  }
+                  );          
+           });
+         $('.button').mouseover(function()
+           {
+             $('#button1').css('border-bottom','50px solid red');
+             $('#button2').css('border-top','50px solid red');
+           }
+           ); 
+           $('.button').mouseout(function()
+           {
+             $('#button1').css('border-bottom','40px solid gray');
+             $('#button2').css('border-top','40px solid gray');
+           }
+           ); 
+         $('#button3').mouseover(function()
+         {        
+           $('#button3').css(
+             {
+               'width':'+=10px',
+               'height':'+=10px',
+               'border':'3px solid orange',
+               
+             });
+            
+         }); //end mouseover
+        $('#button3').mouseout(function()
+         {
+          $('#button3').css(
+              {
+                'width':'-=10px',
+                'height':'-=10px',
+                'border':'3px solid black'
+              }); //end css
+             });// end mouseout
+       $('#button4').mouseover(function()
+         {        
+           $('#button4').css(
+             {
+               'width':'+=7px',
+               'height':'+=7px',
+               'border':'3px solid orange',
+               
+             });
+            
+         }); //end mouseover
+        $('#button4').mouseout(function()
+         {
+          $('#button4').css(
+              {
+                'width':'-=7px',
+                'height':'-=7px',
+                'border':'3px solid black'
+              }); //end css
+         });// end mouseout
+          $('#button7').mouseover(function()
+         {        
+           $('#button7').css(
+             {
+               'width':'+=10px',
+               'height':'+=10px',
+               'border':'3px solid orange',
+               
+             });
+            
+         }); //end mouseover
+        $('#button7').mouseout(function()
+         {
+          $('#button7').css(
+              {
+                'width':'-=10px',
+                'height':'-=10px',
+                'border':'3px solid black'
+              }); //end css
+             });// end mouseout
+
+       $('#button5').mouseover(function()
+         {        
+           $('#button5').css(
+             {
+               'width':'+=7px',
+               'height':'+=7px',
+               'border':'3px solid orange',
+               
+             });
+            
+         }); //end mouseover
+        $('#button5').mouseout(function()
+         {
+          $('#button5').css(
+              {
+                'width':'-=7px',
+                'height':'-=7px',
+                'border':'3px solid black'
+              }); //end css
+             });// end mouseout
+           $('#button4').hide();
+           $('#button5').hide();
+           $('#button7').hide();
+         $('#button3').click(function()
+             {
+            $('#button4').show(500);
+            $('#button5').show(500);
+            $('#button7').show(500);
+            $('.exist').hide();
+           });
+         $('#button6').mouseover(function()
+             {
+               $('#button6').css(
+                   {
+                    'width':'+=4px',
+                    'height':'+=4px',
+                     'border':'3px solid orange',
+                    
+                   });
+             }
+             ); 
+          $('#button6').mouseout(function()
+             {
+               $('#button6').css(
+                   {
+                    'width':'-=4px',
+                    'height':'-=4px',
+                     'border':'none',
+                   });
+             }
+             );
+         $('#button3').click(function()
+            {    
+              $('.exist').hide(); 
+            });
+         $('#ly').hide();
+         $('#button7').click(function()
+             {
+               $('#ly').show();
+               $('#ly').animate(
+                   {
+                     'opacity':'0.6'
+                   
+                    },
+                    200,
+                    function()
+                    {
+                      if(true)
+                    {
+                       datajan1=prompt('第一個任務');
+                       datajan2=prompt('第二個任務');
+                      
+                    }
+                       /*  if(((v+2)%12)==2)
+                    {
+                       datafeb1=prompt('第一個任務');
+                       datafeb2=prompt('第二個任務');
+                       k=2;
+                    }
+                 if(((v+2)%12)==3)
+                    {
+                       datamar1=prompt('第一個任務');
+                       datamar2=prompt('第二個任務');
+                       k=3;
+                    }
+               if(((v+2)%12)==4)
+                    {
+                       dataapr1=prompt('第一個任務');
+                       dataapr2=prompt('第二個任務');
+                       k=4;
+                    }
+               if(((v+2)%12)==5)
+                    {
+                       datamay1=prompt('第一個任務');
+                       datamay2=prompt('第二個任務');
+                        k=5;
+                    }
+
+               if(((v+2)%12)==6)
+                    {
+                       datajun1=prompt('第一個任務');
+                       datajun2=prompt('第二個任務');
+                       k=6;
+                    }
+               if(((v+2)%12)==7)
+                    {
+                       datajul1=prompt('第一個任務');
+                       datajul2=prompt('第二個任務');
+                      k=7;
+                    }
+               if(((v+2)%12)==8)
+                    {
+                       dataaug1=prompt('第一個任務');
+                       dataaug2=prompt('第二個任務');
+                       k=8;
+                    }
+              if(((v+2)%12)==9)
+                    {
+                       datasep1=prompt('第一個任務');
+                       datasep2=prompt('第二個任務');
+                       k=9;
+                    }
+                if(((v+2)%12)==10)
+                    {
+                       dataoct1=prompt('第一個任務');
+                       dataoct2=prompt('第二個任務');
+                        k=10;
+                    }
+                 if(((v+2)%12)==11)
+                    {
+                       datanov1=prompt('第一個任務');
+                       datanov2=prompt('第二個任務');
+                      k=11;
+                    }
+                  if(((v+2)%12)==0)
+                    {
+                       datadec1=prompt('第一個任務');
+                       datadec2=prompt('第二個任務');
+                       k=12;
+                    } */
+                  $('#ly').animate(
+                      {
+                        'opacity':'0.5'
+                      },
+                      1,
+                      function(){
+                        $('#ly').hide();
+                      });   //end closebox's animate
+                      }); //end   openbox's animate    
+             }); //end click '輸入'
+         $('#button5').click(function()
+             {
+               $('#task1').text("一、"+datajan1);
+               $('#task2') .text("二、"+datajan2);
+             });  //end 顯示  
+         $('#button4').click(function()
+          {
+            $('#task1').css('opacity','0');
+            $('#task2').css('opacity','0');
+            $('.exist').show();
+            $('.input').hide();
+          });
+         $('#button6').click(function()
+          {
+            people++;
+            $('#amount2').text(people+'人');
+            if((people>=5)&&(people<10))
+            {
+              $('#output2').text('50%');
+              $('#task1').css('opacity','1');
+            }
+            if(people>=10)
+            {
+                $('#output2').text('100%');
+              $('#task2').css('opacity','1');
+
+            }
+
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="back"></div>
+    <img id="ph1" src="https://i.imgur.com/zqeIK9M.jpg">
+    <div class="o1" id="b2">二月<hr color="FFBB00">February</div>
+    <div class="o1" id="b1">一月<hr color="FFBB00">January</div>
+    <div class="o1" id="b12">十二月<hr color="FFBB00">December</div>
+  <div class="o1" id="b11">十一月<hr color="FFBB00">November</div>
+  <div class="o1" id="b10">十月<hr color="FFBB00">October</div>
+  <div class="o1" id="b9">九月<hr color="FFBB00">September</div>
+  <div class="o1" id="b8">八月<hr color="FFBB00">August</div>
+  <div class="o1" id="b7">七月<hr color="FFBB00">July</div>
+  <div class="o1" id="b6">六月<hr color="FFBB00">June</div>
+  <div class="o1" id="b5">五月<hr color="FFBB00">May</div>
+  <div class="o1" id="b4">四月<hr color="FFBB00">April</div>
+  <div class="o1" id="b3">三月<hr color="FFBB00">March</div>
+  <div class="button" id="button1"></div>
+  <div class="button" id="button2"></div>
+  <div id="button3">開始記事!GO</div>
+  <div id="obj2"></div>
+  <div class="input" id="button4">儲存!!</div>
+  <div class="input" id="button5">顯示!!</div>
+  <div class="exist" id="button6"></div>
+  <div class="input" id="button7">輸入!!</div>
+  <div class="exist" id="amount2">0人</div>
+  <div class="exist" id="output1">顯示內容</div>
+  <div class="exist" id="output2">0%</div>
+  <div id="obj3">記事</div>
+  <div id="obj4">月<hr color="#FFB326">23日</div>
+  <div id="k">1</div>
+  <div id="obj5">任務 {</div>
+  <div id="ly"></div>
+  <div id="task1"></div>
+  <div id="task2"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
