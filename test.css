@@ -1,0 +1,25 @@
+#container {
+    background-image:url('https://i.imgur.com/IHlvhgs.png');
+    background-size:100vw 100vh;
+    height:100%;
+    width:100%;
+    background-repeat:no-repeat;
+}
+#cubic {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:10%;
+  height:10%;
+  background:red;
+
+}
+
+
+
+
+
+
+
+
+
