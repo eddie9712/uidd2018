@@ -1,0 +1,47 @@
+<!doctype>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FAQ</title>
+    <link rel=stylesheet type="text/css" href="FAQ.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.answer').hide();
+      var count=0;
+      $('.q').click(function(){
+        count++;
+        if(count%2==1)
+          $(this).text('- how old are you');
+        else
+          $(this).text('+ how old are you');
+    $(this).next('.answer').toggle(function(){
+      $('.q').css('color','black');  
+    }, 
+    function(){
+       //$(this).next('.answer').fadeOut();
+         
+    }  
+    );//end toggle
+  }); 
+    });//end ready
+    </script>
+  </head>
+  <body>
+    <div id="back"></div>
+    <div id="obj1">a page of FAQ</div>
+    <hr id="line1">
+    <div id="content"><h2 class="q">+ how old are you</h2>
+      <h2 class="answer">I AM 20 YEARS OLD!</h2>
+      <h2 class="q">+ what is your name</h2>
+      <h2 class="answer">MY NAME IS EDDIE!</h2>
+      <h2 class="q">+ what is your gender?</h2>
+      <h2 class="answer">MY GENDER IS MALE!</h2></div>
+  </body>
+</html>
+
+
+
+
+
+
